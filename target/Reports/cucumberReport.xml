@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="0.407" tests="9" skipped="0" failures="0" errors="0">
+<testcase classname="User Login" name="Login with Valid credential - Example #1.1" time="0.071">
+<system-out><![CDATA[
+When Enter the Valid email address test01@test1.test........................passed
+And Enter the valid password test01.........................................passed
+And Click on Login button...................................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with Valid credential - Example #1.2" time="0.008">
+<system-out><![CDATA[
+When Enter the Valid email address test001@test2.test.......................passed
+And Enter the valid password test001........................................passed
+And Click on Login button...................................................passed
+Then User should login successfully.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with Invalid credential - Example #1.1" time="0.004">
+<system-out><![CDATA[
+When Enter the Invalid email add test001@test1.test.........................passed
+And Enter the Invalid password test078......................................passed
+And Click on Login button...................................................passed
+Then User should get warning message Warning: "No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with Invalid credential - Example #1.2" time="0.006">
+<system-out><![CDATA[
+When Enter the Invalid email add test000@test1.test.........................passed
+And Enter the Invalid password test006......................................passed
+And Click on Login button...................................................passed
+Then User should get warning message Warning: "No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with Invalid credential - Example #1.3" time="0.003">
+<system-out><![CDATA[
+When Enter the Invalid email add test067@test1.test.........................passed
+And Enter the Invalid password test056......................................passed
+And Click on Login button...................................................passed
+Then User should get warning message Warning: "No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with valid email and invalid password" time="0.003">
+<system-out><![CDATA[
+When Enter the Valid email address "test01@test1.test"......................passed
+And Enter the Invalid password "test001"....................................passed
+And Click on Login button...................................................passed
+Then User should get warning message Warning: "No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login with Invalid email and valid password" time="0.004">
+<system-out><![CDATA[
+When Enter the Invalid email add "test001@test1.test".......................passed
+And Enter the valid password "test01".......................................passed
+And Click on Login button...................................................passed
+Then User should get warning message Warning: "No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="User Login" name="Login without providing any credential" time="0.002">
+<system-out><![CDATA[
+When User do not enters any credential......................................passed
+And Click on Login button...................................................passed
+Then User should get warning message Warning: "No match for E-Mail Address and/or Password.".passed
+]]></system-out>
+</testcase>
+<testcase classname="Registered User" name="Register with all fields" time="0.014">
+<system-out><![CDATA[
+Given user is on Registration page..........................................passed
+When user enters below details..............................................passed
+And user select the privacy Policy..........................................passed
+And user click on Continue button...........................................passed
+Then User should be able to register successfully with message display......passed
+]]></system-out>
+</testcase>
+</testsuite>

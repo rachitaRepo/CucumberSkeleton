@@ -1,0 +1,56 @@
+Cucumber framework Heirarchy
+===================================================================
+PreRequisite: 
+Add dependecy pom.xml
+cucumber-core 
+cucumber-junit
+cucumber-java
+Add Cucumber plugin from market place in eclipse
+
+===================================================
+order :1 
+
+Folder Structure
+under Src/test/java ;;; 3 pkg for all clasess 
+		1-stepdefinition   2-TestRunner 3- MyHooks---- create classes inside these pkg
+under Src/test/Resources :::   keep yr feature file with .feature extension
+Target Folder ....Cuucmber Report...
+======================================================================
+Order 2: 	
+1- Create Feature file with <ScenarioOutline , background, DataTable and tags >
+
+2-Run Feature  and copy unimplememted method
+
+3-create stepdefinition and paste the unimplememted method
+4-in Stepdef-:  write method with cucumerAnnotaion , regular expression 
+5-create TestRunner class file to execute all StepDefini
+5.1<pass attribute glue : "stepdefinion pkg name">
+6-Create Hook Class to run before and after method with scenario name passing 
+6.1<pass attribute glue : "myhook pkg name">
+6.2... Hooks used to define strp definition (all class file)
+7-Add Plugin to  generate Reports
+8-  Run Test URnner as Junit
+9- Run Entire proj as Run as Maven test
+
+==============
+Browser Open , Application access with Credential --> MyHook Class  (like bas in POM)
+
+Credential : can pass by ScenarioOutline as dataDruven Scenario making
+
+Page Object Repostory:  Page class  for locators   
+
+
+>>>>>stepdefini_test_class extend hookClass <like base class in pom>
+consturctor of class (WebDriver driver ). Super.driver
+OR 
+stepdefini_test_class extend Reposirty_page_Class
+Reposirty page Class??
+=========================
+Publich report in cloude forever / while without below publish for 24 hrs only
+create cucumber.properties file under Resorce folder write code 
+cucumber.publish.enable=true
+1- run test runner, copy URL and paste in browser
+2-logi to github ...create collection ,, copy token 
+3-CMD login as admin ..cmd>   setx<Space>/M CUCUMBER_PUBLISH_TOKEN "d7f9e945-c891-43ff-8e95-28c10f4baa60"
+4- Now 
+comment and uncoment:  crtl +/ 
